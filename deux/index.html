@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Table</title>
+	<script type="text/javascript">
+		$liste = document.getElementById("liste");
+		tableau = ["Bob" , "Julien", "Roger"];
+
+function afficherListe(){
+
+	elements = "";
+	for (i = 0; i < tableau.length; i++){
+
+		elements += "<li>" + tableau[i] + "</li>";
+	}
+	$liste.innerHTML = elements;
+}
+function ajouter(){
+
+	tableau.push($texte.value);
+	afficherListe();
+}
+$ajouter.onclick = ajouter;
+afficherListe();
+	</script>
+</head>
+<body>
+<ul id="liste"></ul>
+<input id="texte">
+<button id="ajouter" onclick="ajouter();"> Ajouter </button>
+</body>
+</html>
